@@ -12,6 +12,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           ></link>
           <meta name="description" content="" />
+
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css"

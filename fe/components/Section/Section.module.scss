@@ -1,0 +1,67 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.section {
+    margin: 70px 0;
+    width: 100%;
+    @include sm {
+        margin: 50px 0;
+    }
+    & > * ~ * {
+        margin-top: 70px;
+        @include sm {
+            margin-top: 50px;
+        }
+    }
+
+    &__Title {
+        margin-bottom: 70px;
+        @include sm {
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 28px;
+            text-align: center;
+            color: $text-orange;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+    &__Body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+        @include lg {
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+    &__Gray {
+        background-color: #e1e1e1;
+        padding: 70px 0;
+        margin-bottom: unset !important;
+        @include sm {
+            padding: 50px 0;
+        }
+    }
+    &__Img {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+            url("../../assets/img/feedback_bg.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 70px 0;
+        margin-top: unset !important;
+        background-attachment: fixed;
+        margin-bottom: unset !important;
+        @include sm {
+            padding: 50px 0;
+        }
+    }
+}

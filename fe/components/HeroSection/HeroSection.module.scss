@@ -1,0 +1,143 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.hero {
+    height: 100vh;
+    max-height: calc(100vh - 60px);
+    width: 100%;
+    color: $text-white;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/img/hero_bg.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    @media only screen and (min-width: 1920px) {
+        max-height: 650px;
+    }
+    @include lg {
+        height: 50vh;
+    }
+    @include md {
+        height: 40vh;
+    }
+    @include sm {
+        padding: 20px 0;
+        max-height: unset;
+        height: calc(100% - 70px);
+    }
+    .heroInfo {
+        max-width: 555px;
+        @include lg {
+            max-width: 400px;
+        }
+        @include md {
+            width: 100%;
+            max-width: unset;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 55.9px;
+            @include md {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+        h3 {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 41.9px;
+            @include md {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 26.9px;
+            margin-bottom: 20px;
+            @include md {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            strong {
+                color: $text-orange;
+            }
+        }
+    }
+    .heroImage {
+        height: auto;
+        justify-self: flex-end;
+        @include md {
+            width: 100%;
+            justify-self: flex-start;
+        }
+        img {
+            @include md {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.btnImg {
+    background-image: url("../../assets/img/hero_watch.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.infoAction {
+    width: 100%;
+    height: 100%;
+    @include flex(center, flex-start);
+}
+.infoAction_left {
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    .connect {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        @include md {
+            flex-direction: column;
+        }
+        span {
+            margin-left: 10px;
+        }
+    }
+}
+
+.infoAction_right {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.infoAction_right::before {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 58%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    background-image: url("../../assets/img/hero_play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    cursor: pointer;
+    @include sm {
+        width: 40px;
+        height: 40px;
+    }
+    @include md {
+        width: 50px;
+        height: 50px;
+    }
+}
+.playLogo {
+    cursor: pointer;
+}

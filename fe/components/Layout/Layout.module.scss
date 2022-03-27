@@ -1,0 +1,16 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.wrapper {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+.main {
+    margin-top: $height-header;
+    @include lg {
+        margin-top: $height-header-lg;
+    }
+    @include sm {
+        margin-top: $height-header-sm;
+    }
+}

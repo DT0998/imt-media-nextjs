@@ -1,0 +1,38 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.why {
+    width: 300px;
+    height: 350px;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    cursor: pointer;
+    border: solid 5px transparent;
+    border-image-source: url(../../assets/img/border.png);
+    box-shadow: $shadow-dark;
+    border-image-slice: 3;
+    border-radius: 15px;
+    padding: 20px 0;
+    @include sm {
+        width: 100%;
+    }
+    .whyIcon {
+        width: 90px;
+        height: 90px;
+        @include flex(center, center);
+        background-color: $main-color;
+        border-radius: 50%;
+    }
+    .whyText {
+        margin: 20px 0 24px 0;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 28px;
+        color: $text-black;
+    }
+    .whyDesc {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+    }
+}

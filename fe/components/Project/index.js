@@ -1,13 +1,10 @@
 import React from "react";
 import ProjectData from "../../data/fake-data/project";
-import { useStore } from "../../store/state";
-import ProjectCard from "./ProjectCard";
 import styles from "./Project.module.scss";
+import ProjectCard from "./ProjectCard";
 export default function Project() {
   const project = ProjectData.getProjectCount(5);
-  const setIsOpenOverlay = useStore((state) => state.setIsOpenOverlay);
-  const setUrlYoutube = useStore((state) => state.setUrlYoutube);
-
+  console.log(project);
   return (
     <div className={styles.project}>
       <div className={styles.project__Item}>
@@ -24,8 +21,8 @@ export default function Project() {
           thumbnail={item.thumbnail}
           url={item.urlYoutube}
           key={index}
-          setIsOpenOverlay={setIsOpenOverlay}
-          setUrlYoutube={setUrlYoutube}
+          setIsOpenOverlay={true}
+          classname={styles.project__Item}
         />
       ))}
     </div>

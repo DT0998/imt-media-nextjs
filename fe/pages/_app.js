@@ -2,7 +2,7 @@ import "../styles/globals.scss";
 import { Layout, Overlay } from "../components";
 import Head from "next/head";
 import Router, { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import { useProgressStore, useStore } from "../store";
 

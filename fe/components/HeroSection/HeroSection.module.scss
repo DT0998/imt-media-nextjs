@@ -37,6 +37,7 @@
             font-size: 42px;
             font-weight: 800;
             line-height: 55.9px;
+            color: $text-white;
             @include md {
                 font-size: 30px;
                 line-height: 30px;
@@ -46,6 +47,7 @@
             font-size: 32px;
             font-weight: bold;
             line-height: 41.9px;
+            color: $text-white;
             @include md {
                 font-size: 20px;
                 line-height: 24px;

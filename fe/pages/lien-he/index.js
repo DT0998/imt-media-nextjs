@@ -21,7 +21,7 @@ export default function Contact() {
         </SectionTitle>
         <SectionBody>
           <div className={styles.contactItem}>
-            <h3 className={styles.contactItemTitle}>
+            <h3 className={styles.contactItem__Title}>
               Công ty truyền thông sự kiện <strong>IMT Media</strong>
             </h3>
             <p>
@@ -54,6 +54,17 @@ export default function Contact() {
             <div className={styles.contact__item__content}>
               <h3>Điện thoại</h3>
             </div>
+          </div>
+          <div className={styles.contactMap}>
+            {/* <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.1291677448894!2d106.76701431488603!3d10.877778992252837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd339c156a4b9a9b!2zMTDCsDUyJzQwLjAiTiAxMDbCsDQ2JzA5LjEiRQ!5e0!3m2!1svi!2s!4v1648480812075!5m2!1svi!2s"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe> */}
           </div>
         </SectionBody>
       </Section>

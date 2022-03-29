@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import {
@@ -28,7 +29,6 @@ export default function Home() {
   return (
     <Helmet title="Trang Chủ">
       <HeroSection />
-
       <Section>
         <SectionTitle>
           <h1>VÌ SAO CHỌN NÊN CHỌN I-MT MEDIA CHÚNG TÔI ?</h1>

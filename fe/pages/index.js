@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 import {
   FeedBack,
@@ -13,6 +13,7 @@ import {
   SectionTitle,
   Why,
 } from "../components";
+import ImageLazyLoad from "../components/Lazy-loading/lazy-loading";
 import { ImagesData } from "../data/fake-data/activities";
 import { FeedbackData } from "../data/fake-data/feedback-card";
 import { partner } from "../data/fake-data/partner";
@@ -90,11 +91,12 @@ export default function Home() {
                   setIsOpenOverlay(true);
                 }}
               >
-                <Image
+                <ImageLazyLoad
                   width={370}
                   height={241}
-                  src={item.src.src}
+                  src={item.src}
                   alt={item.alt}
+                  placeholder="blur"
                 />
               </div>
             ))}
@@ -109,11 +111,12 @@ export default function Home() {
         <SectionBody>
           {partner.map((item) => (
             <div className={styles.imgItem} key={item.id}>
-              <Image
-                src={item.img.src}
+              <ImageLazyLoad
+                src={item.img}
                 alt={item.alt}
                 width={200}
                 height={100}
+                placeholder="blur"
               />
             </div>
           ))}

@@ -4,7 +4,7 @@ import { Button } from "../";
 import styles from "./Quotation.module.scss";
 
 export default function Quotation(props) {
-  console.log(props.slug);
+  // console.log(props.slug);
   return (
     <div
       className={styles.quotation}

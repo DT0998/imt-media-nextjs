@@ -54,7 +54,7 @@ const socialLinks = [
 export const Header = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter();
-  console.log(router.asPath);
+  // console.log(router.asPath);
   return (
     <header className={styles.header}>
       <div className="flex container">

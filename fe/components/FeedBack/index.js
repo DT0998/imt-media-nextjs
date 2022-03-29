@@ -1,7 +1,8 @@
 import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 import styles from "./FeedBack.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
+import ImageLazyLoad from "../Lazy-loading/lazy-loading";
 const FeedBack = (props) => {
   return (
     <div className={styles.feedback}>
@@ -10,7 +11,7 @@ const FeedBack = (props) => {
       </div>
       <p className={styles.feedbackQuote}>{props.quote}</p>
       <div className={styles.feedbackAuthor}>
-        <Image src={props.avatar} alt={props.name} />
+        <ImageLazyLoad src={props.avatar} alt={props.name} placeholder="blur" />
         <div className="author">
           {props.name} <span>({props.position})</span>
         </div>

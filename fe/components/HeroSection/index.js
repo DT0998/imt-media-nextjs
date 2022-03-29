@@ -1,5 +1,5 @@
 //images
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { ImPhone } from "react-icons/im";
 import Typed from "typed.js";
@@ -9,6 +9,7 @@ import src from "../../assets/img/hero_create.png";
 import src1 from "../../assets/img/hero_watch.png";
 import { useStore } from "../../store/state";
 import style from "../Button/Button.module.scss";
+import ImageLazyLoad from "../Lazy-loading/lazy-loading";
 //styles
 import styles from "./HeroSection.module.scss";
 
@@ -55,7 +56,7 @@ export default function HeroSection() {
                   </Button>
                 </a>
                 <div className={`${styles.connect} flex-start`}>
-                  <Image src={src2} alt="" />
+                  <ImageLazyLoad src={src2} alt="" placeholder="blur" />
                   <span>Members Team</span>
                 </div>
               </div>
@@ -66,18 +67,19 @@ export default function HeroSection() {
                   setIsOpenOverlay(true);
                 }}
               >
-                <Image
+                <ImageLazyLoad
                   src={src1}
                   alt=""
                   className={`${styles.playLogo} spin`}
                   height={250}
                   width={250}
+                  placeholder="blur"
                 />
               </div>
             </div>
           </div>
           <div className={styles.heroImage}>
-            <Image src={src} alt="" />
+            <ImageLazyLoad src={src} alt="" placeholder="blur" />
           </div>
         </Grid>
       </div>

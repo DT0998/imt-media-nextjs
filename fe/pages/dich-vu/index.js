@@ -6,7 +6,8 @@ import {
   SectionBody,
   SectionTitle,
 } from "../../components";
-import Image from "next/image";
+import ImageLazyLoad from "../../components/Lazy-loading/lazy-loading";
+// import Image from "next/image";
 //data
 import ProjectData from "../../data/fake-data/project";
 //style
@@ -26,10 +27,11 @@ export default function Service() {
             {projects.map((item, index) => (
               <div className={styles.serviceCard__Item} key={index}>
                 <div className={styles.serviceCard__Item__Image}>
-                  <Image
-                    src={item.thumbnail.src}
+                  <ImageLazyLoad
+                    src={item.thumbnail}
                     alt="Lorem ipsum dolor sit"
                     layout="fill"
+                    placeholder="blur"
                   />
                 </div>
                 <div className={styles.serviceCard__Item__Content}>

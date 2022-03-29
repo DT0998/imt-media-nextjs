@@ -14,7 +14,7 @@ import styles from "./Project.module.scss";
 
 export default function Project() {
   const project = ProjectData.getProjects();
-  console.log(project);
+  // console.log(project);
   return (
     <Helmet title="Dự án">
       <HeroFlat page="Dự án" />

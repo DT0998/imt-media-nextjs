@@ -4,7 +4,7 @@ import styles from "./Project.module.scss";
 import ProjectCard from "./ProjectCard";
 export default function Project() {
   const project = ProjectData.getProjectCount(5);
-  console.log(project);
+  // console.log(project);
   return (
     <div className={styles.project}>
       <div className={styles.project__Item}>
